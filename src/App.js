@@ -1,10 +1,11 @@
 import { Fragment } from 'react';
+import { Home } from './views/Home';
 import './App.css';
 
 function App() {
   return (
     <Fragment>
-      <h1>Hello World</h1>
+      <Home />
     </Fragment>
   );
 }
