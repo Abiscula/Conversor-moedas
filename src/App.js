@@ -1,12 +1,12 @@
-import { Fragment } from 'react';
 import { Home } from './views/Home';
 import './App.css';
+import { Container } from './assets/style/styled-App';
 
 function App() {
   return (
-    <Fragment>
+    <Container>
       <Home />
-    </Fragment>
+    </Container>
   );
 }
 
