@@ -16,6 +16,17 @@ export const StyledMain = styled.div`
     font-size: 1.1rem;
     font-weight: 700;
     z-index: 2;
+    position: relative;
+
+    img {
+            width: 30%;
+            background: none;
+            display: flex;
+            position: absolute;
+            margin-right: 26rem;
+            margin-bottom: 14rem;
+            transform: rotate(-30deg)
+        }
 
     p {
         margin-top: 0.5rem;

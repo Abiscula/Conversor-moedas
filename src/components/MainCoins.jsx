@@ -1,6 +1,7 @@
 import react, { useEffect, useState } from 'react'
 import { requestAPI } from '../api/mainCoins-request'
 import { StyledMain } from '../assets/style/styled-MainCoins';
+import bitcoin from '../assets/style/img/bitcoin.png'
 
 export const MainCoins = () => {
         const [data, setData] = useState({});
@@ -22,6 +23,7 @@ export const MainCoins = () => {
     }, [])
     return (
         <StyledMain>
+            <img src={bitcoin} />
             <h2>Principais moedas</h2>
             <p>1 Dolar = R$: {data['dolar-real']}</p>
             <p>1 Euro = R$: {data['euro-real']}</p>
