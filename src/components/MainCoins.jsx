@@ -1,7 +1,7 @@
 import react, { useEffect, useState } from 'react'
 import { requestAPI } from '../api/mainCoins-request'
 import { StyledMain } from '../assets/style/styled-MainCoins';
-import bitcoin from '../assets/style/img/bitcoin.png'
+import bitcoin from '../assets/img/bitcoin.png'
 
 export const MainCoins = () => {
         const [data, setData] = useState({});
