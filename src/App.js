@@ -1,12 +1,13 @@
 import { Home } from './views/Home';
-import './App.css';
+import { GlobalStyle } from './assets/style/styled-Global';
 import { Container } from './assets/style/styled-App';
 
 function App() {
   return (
-    <Container>
-      <Home />
-    </Container>
+      <Container>
+        <GlobalStyle />
+        <Home />
+      </Container>
   );
 }
 

@@ -64,6 +64,7 @@ export const ConverterStyle = styled.div`
         width: 70%;
         justify-content: space-around;
         padding-left: 22.5rem;
+
         button {
             border: none;
             border-radius: 12px;
