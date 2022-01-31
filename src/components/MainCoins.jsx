@@ -1,10 +1,15 @@
 import react, { useEffect, useState } from 'react'
 import { requestAPI } from '../api/mainCoins-request'
-import { StyledMain } from '../assets/style/styled-MainCoins';
+import { StyledMain, Fade } from '../assets/style/styled-MainCoins'
 import bitcoin from '../assets/img/bitcoin.png'
+import money from '../assets/img/money.png'
+import { useContextTheme } from '../provider/Context'
 
 export const MainCoins = () => {
-        const [data, setData] = useState({});
+
+    const [data, setData] = useState({})
+    const { theme } = useContextTheme()
+
 
     async function currencyValues() {
         let resp = await requestAPI()
@@ -21,13 +26,15 @@ export const MainCoins = () => {
         
         // return () => clearInterval(interval);
     }, [])
+
     return (
-        <StyledMain>
-            <img src={bitcoin} />
+        <StyledMain theme={theme}>
+            <Fade><img src={bitcoin} /></Fade>
             <h2>Principais moedas</h2>
             <p>1 Dolar = R$: {data['dolar-real']}</p>
             <p>1 Euro = R$: {data['euro-real']}</p>
             <p>1 Bitcoin = R$: {data['btc-real']}</p>
+            <img src={money} />
         </StyledMain>
     )
 }

@@ -8,7 +8,7 @@ export const ConverterStyle = styled.div`
     justify-content: space-around;
     height: 15rem;
     width: 60rem;
-    background-color: #4B6587;
+    background-color: ${props => props.theme === 1 ? '#4B6587' : '#47484c'};
     box-shadow: rgb(35 55 80 / 30%) 8px 8px 12px;
     border-radius: 20px;
     font-size: 1.1rem;
@@ -17,7 +17,7 @@ export const ConverterStyle = styled.div`
     margin-top: 5rem;
 
     section {
-        background-color: #4B6587;
+        background-color: none;
         display: flex;
         align-self: center;
         align-items: center;
@@ -30,7 +30,7 @@ export const ConverterStyle = styled.div`
     }
 
     h3 {
-        background-color: #4B6587;
+        background-color: none;
         color: #fefefe;
         font-size: 1.08rem;
         margin-bottom: 5px;
@@ -73,7 +73,7 @@ export const ConverterStyle = styled.div`
             font-size: 1rem;
             font-weight: 700;
             background: #F7F6F2;
-            color: #4B6587;
+            color: ${props => props.theme === 1 ? '#4B6587' : '#47484c'}; 
             cursor: pointer;
         }
 
