@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ConverterStyle, Result } from "../assets/style/styled-CoinConverter"
 import { ConvertRequestAPI } from "../api/coinConverter-request";
-import { useContextTheme } from '../provider/Context'
+import { useContextState } from '../provider/Context'
 
 export const CoinConverter = () => {
 
@@ -9,7 +9,7 @@ export const CoinConverter = () => {
     const [selectedOptionDe, setSelectedOptionDe] = useState('');
     const [selectedOptionPara, setSelectedOptionPara] = useState('');
     const [result, setResult] = useState()
-    const { theme } = useContextTheme()
+    const { theme } = useContextState()
 
     async function API_response() {
         let arr = [selectedOptionDe, selectedOptionPara]

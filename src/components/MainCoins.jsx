@@ -3,12 +3,12 @@ import { requestAPI } from '../api/mainCoins-request'
 import { StyledMain, Fade } from '../assets/style/styled-MainCoins'
 import bitcoin from '../assets/img/bitcoin.png'
 import money from '../assets/img/money.png'
-import { useContextTheme } from '../provider/Context'
+import { useContextState } from '../provider/Context'
 
 export const MainCoins = () => {
 
     const [data, setData] = useState({})
-    const { theme } = useContextTheme()
+    const { theme } = useContextState()
 
 
     async function currencyValues() {
