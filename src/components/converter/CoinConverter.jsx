@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { ConverterStyle, Result } from "../assets/style/styled-CoinConverter"
-import { ConvertRequestAPI } from "../api/coinConverter-request";
-import { useContextState } from '../provider/Context'
+import { ConverterStyle, Result } from "../../assets/style/styled-CoinConverter"
+import { ConvertRequestAPI } from "../../api/coinConverter-request";
+import { useContextState } from '../../provider/Context'
+import { Coins } from "./Coins";
 
 export const CoinConverter = () => {
 
@@ -20,8 +21,7 @@ export const CoinConverter = () => {
         } else {
             let converted = (resp * money).toFixed(2)
             setResult(converted)
-        }
-        
+        } 
     }
 
     return (
@@ -42,13 +42,7 @@ export const CoinConverter = () => {
                         value={selectedOptionDe}
                         onChange={e => setSelectedOptionDe(e.target.value)}
                     >
-                        <option></option>
-                        <option value="BRL">BRL - Real</option>
-                        <option value="USD">USD - Dolar dos EUA</option>
-                        <option value="EUR">EUR - Euro</option>
-                        <option value="BTC">BTC - Bitcoin</option>
-                        <option value="ETH">ETH - Ethereum</option>
-                        <option value="JPY">JPY - Iene Japonês</option>
+                        <Coins />
                     </select>
                 </span>
 
@@ -59,13 +53,7 @@ export const CoinConverter = () => {
                         value={selectedOptionPara}
                         onChange={e => setSelectedOptionPara(e.target.value)}
                     >
-                        <option></option>
-                        <option value="USD">USD - Dolar dos EUA</option>
-                        <option value="BRL">BRL - Real</option>
-                        <option value="EUR">EUR - Euro</option>
-                        <option value="BTC">BTC - Bitcoin</option>
-                        <option value="ETH">ETH - Ethereum</option>
-                        <option value="JPY">JPY - Iene Japonês</option>
+                        <Coins />
                     </select>
                 </span>
             </section>

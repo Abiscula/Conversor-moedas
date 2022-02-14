@@ -1,6 +1,6 @@
 import react, { Fragment } from 'react'
 import { MainCoins } from '../components/MainCoins'
-import { CoinConverter } from '../components/CoinConverter'
+import { CoinConverter } from '../components/converter/CoinConverter'
 import { News } from '../components/News'
 import { Header } from '../assets/style/styled-Home'
 import { useContextState } from '../provider/Context'
